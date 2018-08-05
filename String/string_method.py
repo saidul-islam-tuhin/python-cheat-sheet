@@ -1,3 +1,8 @@
+"""
+Method: capitalize, casefold, lower, title, upper, center, encode
+"""
+
+
 example = 'an example for capitalize()'
 print(example) # OUTPUT: an example for capitalize()
 print(example.capitalize()) # OUTPUT: An example for capitalize()
