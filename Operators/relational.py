@@ -29,3 +29,8 @@
 1 != 1 # OUTPUT: False
 1 != 2 # OUTPUT: True
 1 != '1' # OUTPUT: True
+
+""" ----------------------- Chained Comparsion -------------------- """
+
+2 < 5 < 7 # OUTPUT: True
+2 == 3 < 5 # OUTPUT: False
