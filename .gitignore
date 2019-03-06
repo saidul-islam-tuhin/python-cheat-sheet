@@ -81,3 +81,7 @@ media/
 
 #vscode stuff
 .vscode
+
+# environment
+Pipfile.lock
+.gitignore
