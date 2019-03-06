@@ -1,37 +1,53 @@
 
-class Bird:
-    """ Parent class """
-
-    def __init__(self,bird_name, feathers):
-        self.bird_name = bird_name
-        self.feathers = feathers
-        
-
-    def bird_info(self):
-        print('Bird: {} and it has feathers: {}'.format(self.bird_name, self.feathers))
-
-
-class FlyingBird(Bird):
-    """ Child class """
-
-    def fly_or_not(self):
-        print('Yes! it can Fly')
-
-
-class NotFlyingBird(Bird):
-    """ Child class """
+class Math:
+    """" Parent class """
+    def __init__(self, a, b, c):
+        self.a = a
+        self.b = b
+        self.c = c
     
-    def fly_or_not(self):
-        print("No! it can't Fly")
+    def sum(self):
+        return self.a + self.b
+
+    def sub(self):
+        return self.a - self.b
 
 
-fly_bird_obj = FlyingBird('parrot', True)
+class ExtendMathClass(Math):
+    """ Child class """
 
-fly_bird_obj.bird_info() # OUTPUT: Bird: Parrot and it has feathers: True
-fly_bird_obj.fly_or_not() # OUTPUT: Yes! it can Fly
+    def mul(self):
+        return self.a * self.b
 
 
-not_fly_bird_obj = FlyingBird('penguin', False)
+#obj = ExtendMathClass(6,2)
 
-not_fly_bird_obj.bird_info() # OUTPUT: Bird: Penguin and it has feathers: False
-not_fly_bird_obj.fly_or_not() # OUTPUT: No! it can't Fly
+#print(obj.mul())
+#print(obj.sum())
+
+
+
+"""
+super(): 
+Example: If we want to use extra variable in ExtendMathClass.
+"""
+
+class ExtendMathClass1(Math):
+    """ Child class """
+    def __init__(self, a, b):
+        super().__init__(a, b)
+        self.sum_res = super().sum()
+
+    def calculate(self):
+       return self.a * self.sum_res
+
+
+obj1 = ExtendMathClass1(6,2)
+
+print(obj1.sum())
+print(obj1.sum_res)
+print(obj1.calculate())
+
+
+
+""" Multiple Inheritance """
